@@ -11,7 +11,7 @@ namespace FormsPlayground.Infrastructure
     public class PageBuilder : IPageBuilder
     {
         public Page BuildPage<TViewModel>(object paramsObj = null)
-            where TViewModel : class
+            where TViewModel : class, IFormsViewModel
         {
             try
             {

@@ -126,4 +126,7 @@
   <data name="Ioc_Bootstrap_Argument_is_null_or_empty" xml:space="preserve">
     <value>Argument is null or empty</value>
   </data>
+  <data name="CustomNavigationPage_binding_context_type_error" xml:space="preserve">
+    <value>A forms view should have a binding context of type {0}</value>
+  </data>
 </root>

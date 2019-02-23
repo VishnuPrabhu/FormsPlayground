@@ -34,13 +34,14 @@ namespace FormsPlayground.Features.Home
             {
                 cnp
                     .StartLazyInitialisation()
-                    .SafeFireAndForget(true, 
+                    .SafeFireAndForget(
+                        true, 
                         ex => Console.WriteLine(ex.StackTrace));
             }
         }
 
         private CustomNavigationPage GetTab<TViewModel>(string icon, string title, bool lazyLoad = true)
-            where TViewModel : class
+            where TViewModel : class, IFormsViewModel
         {
             try
             {
