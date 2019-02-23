@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Linq;
 using DryIoc;
 using FormsPlayground.Features.Home.Tabs.More;
 using FormsPlayground.Features.Home.Tabs.Skia;
@@ -74,6 +75,20 @@ namespace FormsPlayground.Features.Home
                 Debugger.Break();
                 throw;
             }
+        }
+        
+        protected override bool OnBackButtonPressed()
+        {
+            // when pressing android hardware back button, show first tab if currently in another tab
+            if (CurrentPage != Children[0]
+                && CurrentPage is CustomNavigationPage cnp 
+                && cnp.CurrentPage == cnp.RootPage) // ignore nested navigations
+            {
+                CurrentPage = Children[0];
+                return true; // returning true will prevent to bubble up the event
+            }
+            
+            return base.OnBackButtonPressed();
         }
     }
 }
