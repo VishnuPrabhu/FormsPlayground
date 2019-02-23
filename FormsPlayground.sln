@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsPlayground.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsPlayground.iOS", "FormsPlayground\FormsPlayground.iOS\FormsPlayground.iOS.csproj", "{C5D0ADDE-6384-4565-AE7C-BA89F50D7AB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsPlayground", "FormsPlayground\FormsPlayground\FormsPlayground.csproj", "{5FD2B3D2-5A86-42FB-B78A-1B9C1D5E651C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormsPlayground", "FormsPlayground\FormsPlayground\FormsPlayground.csproj", "{5FD2B3D2-5A86-42FB-B78A-1B9C1D5E651C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EDAAE0B1-548F-4A38-9717-A7BC96701DCE}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
