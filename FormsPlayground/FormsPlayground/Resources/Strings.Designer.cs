@@ -95,5 +95,14 @@ namespace FormsPlayground.Resources {
                 return ResourceManager.GetString("Menu_Skia", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View must be of type Page.
+        /// </summary>
+        public static string PageBuilder_View_type_exception {
+            get {
+                return ResourceManager.GetString("PageBuilder_View_type_exception", resourceCulture);
+            }
+        }
     }
 }

@@ -129,4 +129,7 @@
   <data name="CustomNavigationPage_binding_context_type_error" xml:space="preserve">
     <value>A forms view should have a binding context of type {0}</value>
   </data>
+  <data name="PageBuilder_View_type_exception" xml:space="preserve">
+    <value>View must be of type Page</value>
+  </data>
 </root>

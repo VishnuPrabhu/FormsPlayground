@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using DryIoc;
+using FormsPlayground.Resources;
 using ReactiveUI;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -18,7 +19,7 @@ namespace FormsPlayground.Infrastructure
                 var view = Ioc.Container.Resolve<IViewFor<TViewModel>>();
                 
                 if(!(view is Page page))
-                    throw new TypeAccessException("view must be a Page type");
+                    throw new TypeAccessException(Strings.PageBuilder_View_type_exception);
                 
                 view.ViewModel = ResolveViewModel<TViewModel>(paramsObj);
 

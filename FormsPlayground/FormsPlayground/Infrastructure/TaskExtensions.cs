@@ -22,7 +22,7 @@ namespace FormsPlayground.Infrastructure
             }
             catch (System.Exception ex) when (onException != null)
             {
-                onException?.Invoke(ex);
+                onException.Invoke(ex);
             }
         }
     }
