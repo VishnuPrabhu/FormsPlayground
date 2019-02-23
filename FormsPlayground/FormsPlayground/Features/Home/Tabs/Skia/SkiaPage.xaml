@@ -6,10 +6,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:infrastructure="clr-namespace:FormsPlayground.Infrastructure;assembly=FormsPlayground"
     xmlns:skia="clr-namespace:FormsPlayground.Features.Home.Tabs.Skia;assembly=FormsPlayground"
-    x:Class="FormsPlayground.Features.Home.Tabs.Skia.SkiaPage">
+    xmlns:resources="clr-namespace:FormsPlayground.Resources;assembly=FormsPlayground"
+    x:Class="FormsPlayground.Features.Home.Tabs.Skia.SkiaPage"
+    Title="{x:Static resources:Strings.Menu_Skia}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Skia"
+            <Label Text="Hola"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>

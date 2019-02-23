@@ -6,10 +6,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:infrastructure="clr-namespace:FormsPlayground.Infrastructure;assembly=FormsPlayground"
     xmlns:more="clr-namespace:FormsPlayground.Features.Home.Tabs.More;assembly=FormsPlayground"
-    x:Class="FormsPlayground.Features.Home.Tabs.More.MorePage">
+    xmlns:resources="clr-namespace:FormsPlayground.Resources;assembly=FormsPlayground"
+    x:Class="FormsPlayground.Features.Home.Tabs.More.MorePage"
+    Title="{x:Static resources:Strings.Menu_More}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="More"
+            <Label Text="More page"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>
