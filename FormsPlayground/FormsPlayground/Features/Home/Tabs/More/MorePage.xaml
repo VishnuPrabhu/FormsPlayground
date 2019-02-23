@@ -11,7 +11,7 @@
     Title="{x:Static resources:Strings.Menu_More}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="More page"
+            <Label Text="More"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>

@@ -23,6 +23,8 @@ namespace FormsPlayground.Features.Home
                 .SetBarItemColor(Color.FromHex("#9B9B9B"))
                 .SetBarSelectedItemColor(Color.FromHex("#00A4FF"));
             
+            BarBackgroundColor = Color.White;
+            
             Children.Add(GetTab<SkiaViewModel>("icon_skia", Strings.Menu_Skia, false));
             Children.Add(GetTab<MoreViewModel>("icon_more", Strings.Menu_More));
             
