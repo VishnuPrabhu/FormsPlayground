@@ -24,6 +24,19 @@ namespace FormsPlayground.Features.Home
             
             Children.Add(GetTab<SkiaViewModel>("icon_skia", Strings.Menu_Skia, false));
             Children.Add(GetTab<MoreViewModel>("icon_more", Strings.Menu_More));
+            
+            CurrentPageChanged += Handle_CurrentPageChanged;
+        }
+        
+        private void Handle_CurrentPageChanged(object sender, EventArgs e)
+        {
+            if (CurrentPage != null && CurrentPage is CustomNavigationPage cnp)
+            {
+                cnp
+                    .StartLazyInitialisation()
+                    .SafeFireAndForget(true, 
+                        ex => Console.WriteLine(ex.StackTrace));
+            }
         }
 
         private CustomNavigationPage GetTab<TViewModel>(string icon, string title, bool lazyLoad = true)

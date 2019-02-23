@@ -9,7 +9,7 @@
     x:Class="FormsPlayground.Features.Home.Tabs.Skia.SkiaPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Skia"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>

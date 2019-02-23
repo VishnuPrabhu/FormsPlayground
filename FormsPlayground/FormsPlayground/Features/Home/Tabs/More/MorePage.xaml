@@ -9,7 +9,7 @@
     x:Class="FormsPlayground.Features.Home.Tabs.More.MorePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="More"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>
