@@ -14,7 +14,7 @@
     <PackageReference Include="LiveXAML" Version="2.1.67" />
     <PackageReference Include="ReactiveUI.Fody" Version="9.11.1" />
     <PackageReference Include="ReactiveUI.XamForms" Version="9.11.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.169046-pre5" />
   </ItemGroup>
 
   <ItemGroup>
