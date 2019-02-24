@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using DryIoc;
+using FormsPlayground.Effects;
 using FormsPlayground.Features.Home.Tabs.Design;
 using FormsPlayground.Features.Home.Tabs.Forms;
 using FormsPlayground.Features.Home.Tabs.Libs;
@@ -25,6 +27,8 @@ namespace FormsPlayground.Features.Home
                 .SetIsSmoothScrollEnabled(false)
                 .SetBarItemColor(Color.FromHex("#9B9B9B"))
                 .SetBarSelectedItemColor(Color.FromHex("#00A4FF"));
+            
+            Effects.Add(new NoShiftEffect());
             
             BarBackgroundColor = Color.White;
             
