@@ -32,9 +32,9 @@ namespace FormsPlayground.Features.Home
             
             BarBackgroundColor = Color.White;
             
-            Children.Add(GetTab<FormsViewModel>("icon_skia", Strings.Menu_Forms, false));
-            Children.Add(GetTab<DesignViewModel>("icon_skia", Strings.Menu_Design));
-            Children.Add(GetTab<LibsViewModel>("icon_skia", Strings.Menu_Libs));
+            Children.Add(GetTab<FormsViewModel>("icon_forms", Strings.Menu_Forms, false));
+            Children.Add(GetTab<DesignViewModel>("icon_design", Strings.Menu_Design));
+            Children.Add(GetTab<LibsViewModel>("icon_libs", Strings.Menu_Libs));
             Children.Add(GetTab<SkiaViewModel>("icon_skia", Strings.Menu_Skia));
             Children.Add(GetTab<MoreViewModel>("icon_more", Strings.Menu_More));
             
