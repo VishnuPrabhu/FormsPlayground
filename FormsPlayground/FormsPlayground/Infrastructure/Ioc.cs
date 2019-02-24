@@ -23,6 +23,7 @@ namespace FormsPlayground.Infrastructure
 
         public void Bootstrap(string identifier, Action<IContainer> bootStrapAction)
         {
+            // Make sure we don´t bootstrap anything twice
             if (_actions.Contains(identifier))
                 return;
             

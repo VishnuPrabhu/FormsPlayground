@@ -2,6 +2,9 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using DryIoc;
+using FormsPlayground.Features.Home.Tabs.Design;
+using FormsPlayground.Features.Home.Tabs.Forms;
+using FormsPlayground.Features.Home.Tabs.Libs;
 using FormsPlayground.Features.Home.Tabs.More;
 using FormsPlayground.Features.Home.Tabs.Skia;
 using FormsPlayground.Infrastructure;
@@ -25,7 +28,10 @@ namespace FormsPlayground.Features.Home
             
             BarBackgroundColor = Color.White;
             
-            Children.Add(GetTab<SkiaViewModel>("icon_skia", Strings.Menu_Skia, false));
+            Children.Add(GetTab<FormsViewModel>("icon_skia", Strings.Menu_Forms, false));
+            Children.Add(GetTab<DesignViewModel>("icon_skia", Strings.Menu_Design));
+            Children.Add(GetTab<LibsViewModel>("icon_skia", Strings.Menu_Libs));
+            Children.Add(GetTab<SkiaViewModel>("icon_skia", Strings.Menu_Skia));
             Children.Add(GetTab<MoreViewModel>("icon_more", Strings.Menu_More));
             
             CurrentPageChanged += Handle_CurrentPageChanged;
@@ -36,7 +42,7 @@ namespace FormsPlayground.Features.Home
             if (CurrentPage != null && CurrentPage is CustomNavigationPage cnp)
             {
                 cnp
-                    .StartLazyInitialisation()
+                    .StartLazyInitialization()
                     .SafeFireAndForget(
                         true, 
                         ex => Console.WriteLine(ex.StackTrace));
@@ -54,7 +60,7 @@ namespace FormsPlayground.Features.Home
                 {
                     // To improve load performance: start with an empty page,
                     // CustomNavigationPage will then create the actual page when navigating to it
-                    holderPage = new CustomNavigationPage(new EmptyPage(), typeof(TViewModel));
+                    holderPage = new CustomNavigationPage(new EmptyPage {Title = title}, typeof(TViewModel));
                 }
                 else
                 {

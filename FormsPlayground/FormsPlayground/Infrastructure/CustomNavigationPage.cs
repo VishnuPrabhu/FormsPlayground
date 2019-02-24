@@ -33,7 +33,7 @@ namespace FormsPlayground.Infrastructure
             }
         }
 
-        public async Task StartLazyInitialisation()
+        public async Task StartLazyInitialization()
         {
             if (_lazyViewModelType != null
                 && Navigation.NavigationStack.Count == 1

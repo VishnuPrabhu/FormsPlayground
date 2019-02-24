@@ -11,7 +11,7 @@
     Title="{x:Static resources:Strings.Menu_Skia}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Skia"
+            <Label Text="{x:Static resources:Strings.Menu_Skia}"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>

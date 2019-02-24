@@ -19,7 +19,7 @@ namespace FormsPlayground.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Strings {
@@ -75,6 +75,33 @@ namespace FormsPlayground.Resources {
         public static string Ioc_Bootstrap_Argument_is_null_or_empty {
             get {
                 return ResourceManager.GetString("Ioc_Bootstrap_Argument_is_null_or_empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Design.
+        /// </summary>
+        public static string Menu_Design {
+            get {
+                return ResourceManager.GetString("Menu_Design", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forms.
+        /// </summary>
+        public static string Menu_Forms {
+            get {
+                return ResourceManager.GetString("Menu_Forms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Libs.
+        /// </summary>
+        public static string Menu_Libs {
+            get {
+                return ResourceManager.GetString("Menu_Libs", resourceCulture);
             }
         }
         

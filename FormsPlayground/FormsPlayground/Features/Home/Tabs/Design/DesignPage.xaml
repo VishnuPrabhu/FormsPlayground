@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <infrastructure:BasePage
-    x:TypeArguments="more:MoreViewModel"
+    x:TypeArguments="design:DesignViewModel"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:infrastructure="clr-namespace:FormsPlayground.Infrastructure;assembly=FormsPlayground"
-    xmlns:more="clr-namespace:FormsPlayground.Features.Home.Tabs.More;assembly=FormsPlayground"
     xmlns:resources="clr-namespace:FormsPlayground.Resources;assembly=FormsPlayground"
-    x:Class="FormsPlayground.Features.Home.Tabs.More.MorePage"
-    Title="{x:Static resources:Strings.Menu_More}">
+    xmlns:design="clr-namespace:FormsPlayground.Features.Home.Tabs.Design;assembly=FormsPlayground"
+    x:Class="FormsPlayground.Features.Home.Tabs.Design.DesignPage"
+    Title="{x:Static resources:Strings.Menu_Design}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{x:Static resources:Strings.Menu_More}"
+            <Label Text="{x:Static resources:Strings.Menu_Design}"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>

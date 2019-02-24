@@ -132,4 +132,13 @@
   <data name="PageBuilder_View_type_exception" xml:space="preserve">
     <value>View must be of type Page</value>
   </data>
+  <data name="Menu_Libs" xml:space="preserve">
+    <value>Libs</value>
+  </data>
+  <data name="Menu_Forms" xml:space="preserve">
+    <value>Forms</value>
+  </data>
+  <data name="Menu_Design" xml:space="preserve">
+    <value>Design</value>
+  </data>
 </root>
