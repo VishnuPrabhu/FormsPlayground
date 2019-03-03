@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <pages:BasePage
-    x:TypeArguments="more1:MoreViewModel"
+    x:TypeArguments="viewModels:MoreViewModel"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:infrastructure="clr-namespace:FormsPlayground.Infrastructure;assembly=FormsPlayground"
     xmlns:resources="clr-namespace:FormsPlayground.Resources;assembly=FormsPlayground"
-    xmlns:more1="clr-namespace:FormsPlayground.Features.Home.More;assembly=FormsPlayground"
     xmlns:pages="clr-namespace:FormsPlayground.Infrastructure.Pages;assembly=FormsPlayground"
+    xmlns:viewModels="clr-namespace:FormsPlayground.Features.Home.ViewModels"
     x:Class="FormsPlayground.Features.Home.More.MorePage"
     Title="{x:Static resources:Strings.Menu_More}">
+    
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{x:Static resources:Strings.Menu_More}"
@@ -17,4 +17,5 @@
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
+    
 </pages:BasePage>

@@ -1,6 +1,6 @@
 using FormsPlayground.Infrastructure.Mvvm;
 
-namespace FormsPlayground.Features.Home.More
+namespace FormsPlayground.Features.Home.ViewModels
 {
     public class MoreViewModel : BaseViewModel
     {

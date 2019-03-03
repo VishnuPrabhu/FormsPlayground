@@ -22,7 +22,7 @@ namespace FormsPlayground.Features.Home.ViewModels
 
         private static string[] _jsonEmbeddedResources;
         
-        public FeatureListViewModel(string jsonFile)
+        public FeatureListViewModel(string jsonFile, string path = null)
         {
             LoadCommand = ReactiveCommand.Create<Unit, IEnumerable<FeatureNode>>(_ =>
             {
