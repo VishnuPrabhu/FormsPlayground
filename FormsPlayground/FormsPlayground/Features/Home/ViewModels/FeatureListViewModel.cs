@@ -46,7 +46,7 @@ namespace FormsPlayground.Features.Home.ViewModels
                 {
                     var json = streamReader.ReadToEnd();
                     var tree = JsonConvert.DeserializeObject<IEnumerable<FeatureNode>>(json);
-                    return tree;
+                    return tree.Where(x => !string.IsNullOrEmpty(x.ViewModelClass));
                 }
             });
             

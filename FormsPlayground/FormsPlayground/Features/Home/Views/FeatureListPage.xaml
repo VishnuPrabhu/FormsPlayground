@@ -12,10 +12,10 @@
 
     <ContentPage.Content>
         <ListView
+            x:Name="FeatureListView"
             ItemsSource="{Binding Tree}"
             BackgroundColor="White"
             SeparatorColor="Black"
-            SelectionMode="None"
             CachingStrategy="RecycleElement"
             RowHeight="80">
             <ListView.ItemTemplate>
