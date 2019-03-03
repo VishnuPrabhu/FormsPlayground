@@ -14,7 +14,11 @@ namespace FormsPlayground.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            
+            Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
+            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
+            Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            
             LoadApplication(new App());
         }
     }

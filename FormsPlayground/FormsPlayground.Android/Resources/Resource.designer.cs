@@ -665,7 +665,6 @@ namespace FormsPlayground.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Color.switch_thumb_normal_material_light = global::FormsPlayground.Droid.Resource.Color.switch_thumb_normal_material_light;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.tooltip_background_dark = global::FormsPlayground.Droid.Resource.Color.tooltip_background_dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.tooltip_background_light = global::FormsPlayground.Droid.Resource.Color.tooltip_background_light;
-			global::Xamarin.Forms.Platform.Android.Resource.Color.white_disabled_material = global::FormsPlayground.Droid.Resource.Color.white_disabled_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_action_bar_content_inset_material = global::FormsPlayground.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::FormsPlayground.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_action_bar_default_height_material = global::FormsPlayground.Droid.Resource.Dimension.abc_action_bar_default_height_material;
@@ -986,8 +985,6 @@ namespace FormsPlayground.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.ic_mtrl_chip_checked_black = global::FormsPlayground.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.ic_mtrl_chip_checked_circle = global::FormsPlayground.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.ic_mtrl_chip_close_circle = global::FormsPlayground.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
-			global::Xamarin.Forms.Platform.Android.Resource.Drawable.MaterialActivityIndicatorBackground = global::FormsPlayground.Droid.Resource.Drawable.MaterialActivityIndicatorBackground;
-			global::Xamarin.Forms.Platform.Android.Resource.Drawable.MaterialProgressBar = global::FormsPlayground.Droid.Resource.Drawable.MaterialProgressBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.mtrl_snackbar_background = global::FormsPlayground.Droid.Resource.Drawable.mtrl_snackbar_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.mtrl_tabs_default_indicator = global::FormsPlayground.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.navigation_empty_icon = global::FormsPlayground.Droid.Resource.Drawable.navigation_empty_icon;
@@ -1848,11 +1845,8 @@ namespace FormsPlayground.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::FormsPlayground.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_Toolbar = global::FormsPlayground.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::FormsPlayground.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialButton = global::FormsPlayground.Droid.Resource.Style.XamarinFormsMaterialButton;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialEntryFilled = global::FormsPlayground.Droid.Resource.Style.XamarinFormsMaterialEntryFilled;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialProgressBarCircular = global::FormsPlayground.Droid.Resource.Style.XamarinFormsMaterialProgressBarCircular;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialProgressBarHorizontal = global::FormsPlayground.Droid.Resource.Style.XamarinFormsMaterialProgressBarHorizontal;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialSlider = global::FormsPlayground.Droid.Resource.Style.XamarinFormsMaterialSlider;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialTheme = global::FormsPlayground.Droid.Resource.Style.XamarinFormsMaterialTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar = global::FormsPlayground.Droid.Resource.Styleable.ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_background = global::FormsPlayground.Droid.Resource.Styleable.ActionBar_background;
@@ -7472,7 +7466,10 @@ namespace FormsPlayground.Droid
 			public const int TextInputLayoutFilledBox = 2130968660;
 			
 			// aapt resource value: 0x7f040055
-			public const int Toolbar = 2130968661;
+			public const int textinputlayoutoutlinedbox = 2130968661;
+			
+			// aapt resource value: 0x7f040056
+			public const int Toolbar = 2130968662;
 			
 			static Layout()
 			{

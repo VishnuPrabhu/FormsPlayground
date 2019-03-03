@@ -11,10 +11,11 @@
 
   <ItemGroup>
     <PackageReference Include="DryIoc.dll" Version="3.0.2" />
-    <PackageReference Include="LiveXAML" Version="2.1.68" />
+    <PackageReference Include="LiveXAML" Version="2.1.70" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="ReactiveUI.Fody" Version="9.11.1" />
     <PackageReference Include="ReactiveUI.XamForms" Version="9.11.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.169046-pre5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Update="Features\Home\Views\FeatureListPage.xaml.cs">
+      <DependentUpon>FeatureListPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +34,15 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\Home\Data\HomeLibs.json" />
+    <EmbeddedResource Include="Features\Home\Data\HomeSkia.json" />
+    <None Remove="Features\Home\Data\Forms.json" />
+    <None Remove="Features\Home\Data\HomeForms.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Features\Home\Data\HomeDesign.json" />
+    <EmbeddedResource Include="Features\Home\Data\HomeForms.json" />
   </ItemGroup>
   
   

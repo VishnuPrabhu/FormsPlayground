@@ -1,0 +1,23 @@
+using System;
+using FormsPlayground.Features.Home.More;
+using FormsPlayground.Features.Home.ViewModels;
+using FormsPlayground.Infrastructure.Pages;
+using FormsPlayground.Resources;
+
+namespace FormsPlayground.Features.Home.Views
+{
+    public sealed class HomeTabbedPage : CustomTabbedPage
+    {
+        public HomeTabbedPage()
+        {
+            AddTab<FeatureListViewModel>("icon_forms", Strings.Menu_Forms, false);
+            AddTab<FeatureListViewModel>("icon_design", Strings.Menu_Design);
+            AddTab<FeatureListViewModel>("icon_libs", Strings.Menu_Libs);
+            AddTab<FeatureListViewModel>("icon_skia", Strings.Menu_Skia);
+            AddTab<MoreViewModel>("icon_more", Strings.Menu_More);
+        }
+
+        protected override object CreateParametersObject(Type viewModelType, string title, bool lazyLoad) 
+            => new {jsonFile = $"Home{title}.json"};
+    }
+}

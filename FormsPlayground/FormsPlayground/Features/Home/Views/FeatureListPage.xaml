@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pages:BasePage
+    x:TypeArguments="viewModels:FeatureListViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:FormsPlayground.Infrastructure.Pages;assembly=FormsPlayground"
+    xmlns:viewModels="clr-namespace:FormsPlayground.Features.Home.ViewModels;assembly=FormsPlayground"
+    xmlns:model="clr-namespace:FormsPlayground.Features.Home.Model"
+    x:Class="FormsPlayground.Features.Home.Views.FeatureListPage"
+    x:DataType="viewModels:FeatureListViewModel">
+    
+    <ContentPage.Content>
+        <ListView 
+            x:Name="FeatureListView" 
+            ItemsSource="{Binding Tree}"
+            BackgroundColor="White" 
+            SeparatorColor="Black"
+            SelectionMode="None"
+            VerticalScrollBarVisibility="Never"
+            RowHeight="80">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:FeatureNode">
+                    <ViewCell>
+                        <Grid 
+                            VerticalOptions="CenterAndExpand" 
+                            HeightRequest="80" 
+                            Padding="15,0">
+                            <Label
+                                x:Name="ColoredChevron"
+                                Text="❯"
+                                Margin="-29,-10,0,0"
+                                TextColor="LightGray"
+                                FontSize="50"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center" />
+                            <StackLayout 
+                                Spacing="3" 
+                                VerticalOptions="CenterAndExpand">
+                                <Label
+                                    Margin="10,12,10,0"
+                                    TextColor="#414040"
+                                    FontSize="14"
+                                    FontAttributes="Bold"
+                                    Text="{Binding Title}" />
+                                <Label
+                                    Margin="10,0,28,12"
+                                    FontSize="11"
+                                    Text="{Binding Subtitle}" />
+                            </StackLayout>
+                            <Label
+                                Text="❯"
+                                Margin="0,0,7,0"
+                                TextColor="#414040"
+                                FontSize="13"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</pages:BasePage>

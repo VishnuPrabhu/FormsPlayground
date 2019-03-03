@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Text controls",
+    "subtitle": "Text display and entry controls",
+    "viewModelClass": "text controls"
+  },
+  {
+    "title": "CollectionView vertical",
+    "subtitle": "CollectionView goodness",
+    "viewModelClass": "collection view empty"
+  }
+]

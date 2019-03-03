@@ -1,10 +1,9 @@
 using DryIoc;
-using FormsPlayground.Features.Home.Tabs.Design;
-using FormsPlayground.Features.Home.Tabs.Forms;
-using FormsPlayground.Features.Home.Tabs.Libs;
-using FormsPlayground.Features.Home.Tabs.More;
-using FormsPlayground.Features.Home.Tabs.Skia;
-using FormsPlayground.Infrastructure;
+using FormsPlayground.Features.Home.More;
+using FormsPlayground.Features.Home.ViewModels;
+using FormsPlayground.Features.Home.Views;
+using FormsPlayground.Infrastructure.InversionOfControl;
+using FormsPlayground.Infrastructure.Mvvm;
 
 namespace FormsPlayground.Core
 {
@@ -14,11 +13,9 @@ namespace FormsPlayground.Core
         {
             container.Register<IPageBuilder, PageBuilder>();
 
-            container.RegisterViewForViewModel<SkiaPage, SkiaViewModel>();
+            // HOME
+            container.RegisterViewForViewModel<FeatureListPage, FeatureListViewModel>();
             container.RegisterViewForViewModel<MorePage, MoreViewModel>();
-            container.RegisterViewForViewModel<DesignPage, DesignViewModel>();
-            container.RegisterViewForViewModel<FormsPage, FormsViewModel>();
-            container.RegisterViewForViewModel<LibsPage, LibsViewModel>();
         }
     }
 }

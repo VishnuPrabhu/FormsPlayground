@@ -106,7 +106,7 @@ namespace FormsPlayground.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to More.
+        ///   Looks up a localized string similar to Misc.
         /// </summary>
         public static string Menu_More {
             get {
