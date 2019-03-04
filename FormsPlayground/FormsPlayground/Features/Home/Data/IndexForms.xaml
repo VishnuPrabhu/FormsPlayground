@@ -18,6 +18,7 @@
             Subtitle="Simple button examples"/>
         
         <m:FeatureNode
+            Id="grand"
             Title="Grand"
             Subtitle="This node has nested elements">
             <m:FeatureNode.Children>

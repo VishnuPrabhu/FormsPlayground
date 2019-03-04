@@ -150,4 +150,7 @@
   <data name="FeatureListViewModel_Data_error" xml:space="preserve">
     <value>Data error</value>
   </data>
+  <data name="FeatureListViewModel_ViewModelType_error" xml:space="preserve">
+    <value>Node with title '{0}' needs a {1}</value>
+  </data>
 </root>

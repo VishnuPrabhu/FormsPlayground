@@ -97,6 +97,15 @@ namespace FormsPlayground.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Node with title &apos;{0}&apos; needs a {1}.
+        /// </summary>
+        public static string FeatureListViewModel_ViewModelType_error {
+            get {
+                return ResourceManager.GetString("FeatureListViewModel_ViewModelType_error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument is null or empty.
         /// </summary>
         public static string Ioc_Bootstrap_Argument_is_null_or_empty {

@@ -17,7 +17,6 @@ namespace FormsPlayground.Features.Home.ViewModels
         public ReactiveCommand<Unit, IEnumerable<FeatureNode>> LoadCommand { get; }
         public ReactiveCommand<FeatureNode, Unit> OpenFeatureCommand { get; }
         
-        [Reactive] public string Title { get; private set; }
         public extern IEnumerable<FeatureNode> Tree { [ObservableAsProperty] get; }
 
         private string _currentPath;
@@ -34,7 +33,7 @@ namespace FormsPlayground.Features.Home.ViewModels
                 {
                     _currentPath = path;
 
-                    var pathParts = path.Split(new []{ "."}, StringSplitOptions.RemoveEmptyEntries);
+                    var pathParts = path.Split(new []{"."}, StringSplitOptions.RemoveEmptyEntries);
                     string title = null;
                     foreach (var part in pathParts)
                     {
@@ -77,10 +76,16 @@ namespace FormsPlayground.Features.Home.ViewModels
             {
                 if (feature.Children == null)
                 {
-                    if(feature.ViewModelType == null)
-                        throw new ControlledException($"Node with title '{feature.Title}' needs a {nameof(feature.ViewModelType)}");
+                    if (feature.ViewModelType == null)
+                    {
+                        throw new ControlledException(
+                            string.Format(Strings.FeatureListViewModel_ViewModelType_error, 
+                                feature.Title, 
+                                nameof(feature.ViewModelType)),
+                            Strings.FeatureListViewModel_Data_error);
+                    }
                     
-                    await Navigator.Push(feature.ViewModelType);
+                    await Navigator.Push(feature.ViewModelType, new {title = feature.Title});
                     return Unit.Default;
                 }
 
