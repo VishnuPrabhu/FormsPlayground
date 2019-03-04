@@ -11,7 +11,13 @@
         <m:FeatureNode
             Title="Labels"
             Subtitle="Simple label examples"
-            ViewModelType="{x:Type labels:LabelsViewModel}"/>
+            ViewModelType="{x:Type labels:LabelsViewModel}">
+            <m:FeatureNode.Description>
+                hola 
+                amigos
+                como va todo
+            </m:FeatureNode.Description>
+        </m:FeatureNode>
     
         <m:FeatureNode
             Title="Button"

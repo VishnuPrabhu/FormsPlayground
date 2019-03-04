@@ -25,9 +25,8 @@ namespace FormsPlayground.Features.Home.ViewModels
         {
             LoadCommand = ReactiveCommand.Create<Unit, IEnumerable<FeatureNode>>(_ =>
             {
-                var tree = ((IEnumerable<FeatureNode>) Application.Current
-                    .Resources[resourceKey])
-                    .ToList();
+                var tree = (FeatureNode[]) Application.Current
+                    .Resources[resourceKey];
 
                 if (path != null)
                 {
@@ -39,7 +38,7 @@ namespace FormsPlayground.Features.Home.ViewModels
                     {
                         var node = tree.First(x => x.Id == part);
                         title = node.Title;
-                        tree = node.Children.ToList();
+                        tree = node.Children;
                     }
 
                     // set title after the loop to avoid unnecessary property changed events

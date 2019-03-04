@@ -37,7 +37,7 @@ namespace FormsPlayground.Framework.Pages
                     .StartLazyInitialization()
                     .SafeFireAndForget(
                         true, 
-                        ex => Console.WriteLine((string) ex.StackTrace));
+                        ex => Console.WriteLine(ex.StackTrace));
             }
         }
         
