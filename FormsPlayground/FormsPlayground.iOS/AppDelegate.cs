@@ -1,5 +1,6 @@
 ﻿using FormsPlayground.Core;
 using FormsPlayground.Infrastructure;
+using FormsPlayground.Infrastructure.InversionOfControl;
 using Foundation;
 using UIKit;
 

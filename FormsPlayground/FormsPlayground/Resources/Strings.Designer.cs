@@ -70,6 +70,42 @@ namespace FormsPlayground.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data error.
+        /// </summary>
+        public static string FeatureListViewModel_Data_error {
+            get {
+                return ResourceManager.GetString("FeatureListViewModel_Data_error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature list has multiple parent nodes with the same id.
+        /// </summary>
+        public static string FeatureListViewModel_Feature_list_has_multiple_parent_nodes_with_the_same_id {
+            get {
+                return ResourceManager.GetString("FeatureListViewModel_Feature_list_has_multiple_parent_nodes_with_the_same_id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Node with title &apos;{0}&apos; needs an Id.
+        /// </summary>
+        public static string FeatureListViewModel_Node_id_error {
+            get {
+                return ResourceManager.GetString("FeatureListViewModel_Node_id_error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Node with title &apos;{0}&apos; needs a {1}.
+        /// </summary>
+        public static string FeatureListViewModel_ViewModelType_error {
+            get {
+                return ResourceManager.GetString("FeatureListViewModel_ViewModelType_error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument is null or empty.
         /// </summary>
         public static string Ioc_Bootstrap_Argument_is_null_or_empty {
@@ -106,7 +142,7 @@ namespace FormsPlayground.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to More.
+        ///   Looks up a localized string similar to Misc.
         /// </summary>
         public static string Menu_More {
             get {

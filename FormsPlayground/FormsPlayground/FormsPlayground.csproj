@@ -11,10 +11,11 @@
 
   <ItemGroup>
     <PackageReference Include="DryIoc.dll" Version="3.0.2" />
-    <PackageReference Include="LiveXAML" Version="2.1.68" />
+    <PackageReference Include="LiveXAML" Version="2.1.70" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="ReactiveUI.Fody" Version="9.11.1" />
     <PackageReference Include="ReactiveUI.XamForms" Version="9.11.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.169046-pre5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,13 +24,39 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Update="Features\Home\Views\FeatureListPage.xaml.cs">
+      <DependentUpon>FeatureListPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Features\Home\Views\FeatureView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Features\Labels\LabelsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Remove="Features\Home\Data\Forms.json" />
+    <None Remove="Features\Home\Data\HomeForms.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Features\Home\Data\IndexForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Page>
+    <Page Include="Features\Home\Views\FeatureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Page>
+    <Page Include="Features\Labels\LabelsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Page>
   </ItemGroup>
   
   

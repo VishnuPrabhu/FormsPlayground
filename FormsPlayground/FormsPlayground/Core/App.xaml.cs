@@ -1,5 +1,5 @@
-﻿using FormsPlayground.Features.Home;
-using FormsPlayground.Infrastructure;
+﻿using FormsPlayground.Features.Home.Views;
+using FormsPlayground.Infrastructure.InversionOfControl;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -13,7 +13,7 @@ namespace FormsPlayground.Core
             
             Ioc.Bootstrapper.Bootstrap("Core", CoreBootstrap.Run);
 
-            MainPage = new MainPage();
+            MainPage = new HomeTabbedPage();
         }
 
         protected override void OnStart()

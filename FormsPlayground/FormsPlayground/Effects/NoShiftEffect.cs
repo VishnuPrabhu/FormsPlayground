@@ -6,7 +6,6 @@ namespace FormsPlayground.Effects
     {
         public NoShiftEffect() 
             : base($"{nameof(FormsPlayground)}.{nameof(NoShiftEffect)}")
-        {
-        }
+        { }
     }
 }
