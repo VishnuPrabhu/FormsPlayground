@@ -11,7 +11,9 @@
 
   <ItemGroup>
     <PackageReference Include="DryIoc.dll" Version="3.0.2" />
+    <PackageReference Include="Fody" Version="4.0.2" />
     <PackageReference Include="LiveXAML" Version="2.1.70" />
+    <PackageReference Include="MethodTimer.Fody" Version="2.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="ReactiveUI.Fody" Version="9.11.1" />
     <PackageReference Include="ReactiveUI.XamForms" Version="9.11.1" />

@@ -1,9 +1,11 @@
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using DryIoc;
 using FormsPlayground.Framework.InversionOfControl;
 using FormsPlayground.Resources;
+using MethodTimer;
 using ReactiveUI;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -12,6 +14,7 @@ namespace FormsPlayground.Framework.Mvvm
 {
     public class PageBuilder : IPageBuilder
     {
+        [Time]
         public Page BuildPage<TViewModel>(object paramsObj = null, string pageKey = null)
             where TViewModel : class, IFormsViewModel
         {
@@ -29,6 +32,7 @@ namespace FormsPlayground.Framework.Mvvm
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                Debugger.Break();
                 throw;
             }
         }
@@ -40,6 +44,7 @@ namespace FormsPlayground.Framework.Mvvm
                 .MakeGenericMethod(viewModelType)
                 .Invoke(this, new [] { paramsObj, pageKey }) as Page;
 
+        [Time]
         private static TViewModel ResolveViewModel<TViewModel>(object paramsObj = null)
         {
             if (paramsObj == null)
