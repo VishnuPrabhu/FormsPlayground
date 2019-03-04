@@ -33,23 +33,27 @@
     <EmbeddedResource Update="Features\Home\Views\FeatureView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Features\Labels\LabelsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\Home\Data\HomeLibs.json" />
-    <EmbeddedResource Include="Features\Home\Data\HomeSkia.json" />
     <None Remove="Features\Home\Data\Forms.json" />
     <None Remove="Features\Home\Data\HomeForms.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Features\Home\Data\HomeDesign.json" />
-    <EmbeddedResource Include="Features\Home\Data\HomeForms.json" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Page Include="Features\Home\Data\IndexForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Page>
     <Page Include="Features\Home\Views\FeatureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Page>
+    <Page Include="Features\Labels\LabelsPage.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>

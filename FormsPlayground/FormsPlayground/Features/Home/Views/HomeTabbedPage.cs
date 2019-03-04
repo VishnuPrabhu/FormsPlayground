@@ -18,6 +18,6 @@ namespace FormsPlayground.Features.Home.Views
         }
 
         protected override object CreateParametersObject(Type viewModelType, string title, bool lazyLoad) 
-            => new {jsonFile = $"Home{title}.json"};
+            => new {resourceKey = $"Index{title}"};
     }
 }

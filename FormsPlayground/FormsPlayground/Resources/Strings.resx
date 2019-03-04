@@ -141,4 +141,13 @@
   <data name="Menu_Design" xml:space="preserve">
     <value>Design</value>
   </data>
+  <data name="FeatureListViewModel_Node_id_error" xml:space="preserve">
+    <value>Node with title '{0}' needs an Id</value>
+  </data>
+  <data name="FeatureListViewModel_Feature_list_has_multiple_parent_nodes_with_the_same_id" xml:space="preserve">
+    <value>Feature list has multiple parent nodes with the same id</value>
+  </data>
+  <data name="FeatureListViewModel_Data_error" xml:space="preserve">
+    <value>Data error</value>
+  </data>
 </root>

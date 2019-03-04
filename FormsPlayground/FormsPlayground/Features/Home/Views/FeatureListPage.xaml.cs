@@ -31,6 +31,11 @@ namespace FormsPlayground.Features.Home.Views
                     .Do(x => FeatureListView.SelectedItem = null) // without this, it will automatically execute when navigating back
                     .InvokeCommand(ViewModel.OpenFeatureCommand)
                     .DisposeWith(disposables);
+                
+                this
+                    .WhenAnyValue(x => x.ViewModel.Title)
+                    .Where(x => !string.IsNullOrEmpty(x))
+                    .BindTo(this, x => x.Title);
             });
         }
     }

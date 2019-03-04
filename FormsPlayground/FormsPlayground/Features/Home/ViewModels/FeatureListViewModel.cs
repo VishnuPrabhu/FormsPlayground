@@ -1,15 +1,14 @@
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reactive;
-using System.Reflection;
-using System.Threading.Tasks;
 using FormsPlayground.Features.Home.Model;
 using FormsPlayground.Infrastructure.Exceptions;
 using FormsPlayground.Infrastructure.Mvvm;
-using Newtonsoft.Json;
+using FormsPlayground.Resources;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
+using Xamarin.Forms;
 
 namespace FormsPlayground.Features.Home.ViewModels
 {
@@ -18,41 +17,79 @@ namespace FormsPlayground.Features.Home.ViewModels
         public ReactiveCommand<Unit, IEnumerable<FeatureNode>> LoadCommand { get; }
         public ReactiveCommand<FeatureNode, Unit> OpenFeatureCommand { get; }
         
+        [Reactive] public string Title { get; private set; }
         public extern IEnumerable<FeatureNode> Tree { [ObservableAsProperty] get; }
 
-        private static string[] _jsonEmbeddedResources;
+        private string _currentPath;
         
-        public FeatureListViewModel(string jsonFile, string path = null)
+        public FeatureListViewModel(string resourceKey, string path = null)
         {
             LoadCommand = ReactiveCommand.Create<Unit, IEnumerable<FeatureNode>>(_ =>
             {
-                var assembly = GetType().GetTypeInfo().Assembly;
-                
-                _jsonEmbeddedResources = _jsonEmbeddedResources 
-                    ?? assembly
-                        .GetManifestResourceNames()
-                        .Where(x => x.EndsWith(".json"))
-                        .ToArray();
+                var tree = ((IEnumerable<FeatureNode>) Application.Current
+                    .Resources[resourceKey])
+                    .ToList();
 
-                var resourceName = _jsonEmbeddedResources
-                    .FirstOrDefault(x => x.EndsWith(jsonFile));
-                
-                if(resourceName == null)
-                    throw new ControlledException($"{jsonFile} not found in embedded resources");
-
-                var stream = assembly.GetManifestResourceStream(resourceName);
-                
-                using (var streamReader = new StreamReader(stream))
+                if (path != null)
                 {
-                    var json = streamReader.ReadToEnd();
-                    var tree = JsonConvert.DeserializeObject<IEnumerable<FeatureNode>>(json);
-                    return tree.Where(x => !string.IsNullOrEmpty(x.ViewModelClass));
+                    _currentPath = path;
+
+                    var pathParts = path.Split(new []{ "."}, StringSplitOptions.RemoveEmptyEntries);
+                    string title = null;
+                    foreach (var part in pathParts)
+                    {
+                        var node = tree.First(x => x.Id == part);
+                        title = node.Title;
+                        tree = node.Children.ToList();
+                    }
+
+                    // set title after the loop to avoid unnecessary property changed events
+                    Title = title;
                 }
+
+                // nodes with children lookup
+                var parents = tree
+                    .Where(x => x.Children != null)
+                    .ToList();
+
+                // throw when id is missing in parent nodes
+                var firstFailure = parents.FirstOrDefault(x => string.IsNullOrEmpty(x.Id));
+                if (firstFailure != null)
+                    throw new ControlledException(
+                        string.Format(Strings.FeatureListViewModel_Node_id_error, firstFailure.Title), 
+                        Strings.FeatureListViewModel_Data_error);
+                
+                // throw with duplicated ids
+                var duplicated = parents
+                    .GroupBy(c => c.Id)
+                    .Where(g => g.Skip(1).Any())
+                    .SelectMany(c => c);
+                
+                if (duplicated.Count() > 1)
+                    throw new ControlledException(
+                        Strings.FeatureListViewModel_Feature_list_has_multiple_parent_nodes_with_the_same_id, 
+                        Strings.FeatureListViewModel_Data_error);
+
+                return tree;
             });
             
-            OpenFeatureCommand = ReactiveCommand.CreateFromTask<FeatureNode, Unit>(feature =>
+            OpenFeatureCommand = ReactiveCommand.CreateFromTask<FeatureNode, Unit>(async feature =>
             {
-                return Task.FromResult(Unit.Default);
+                if (feature.Children == null)
+                {
+                    if(feature.ViewModelType == null)
+                        throw new ControlledException($"Node with title '{feature.Title}' needs a {nameof(feature.ViewModelType)}");
+                    
+                    await Navigator.Push(feature.ViewModelType);
+                    return Unit.Default;
+                }
+
+                var nestedPath = _currentPath != null 
+                    ? $"{_currentPath}.{feature.Id}"
+                    : feature.Id;
+                
+                await Navigator.Push<FeatureListViewModel>(new {resourceKey, path=nestedPath});
+                return Unit.Default;
             });
 
             LoadCommand
