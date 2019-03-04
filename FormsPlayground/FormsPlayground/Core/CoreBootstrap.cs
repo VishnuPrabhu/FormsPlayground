@@ -13,7 +13,6 @@ namespace FormsPlayground.Core
         {
             container.Register<IPageBuilder, PageBuilder>();
 
-            // HOME
             container.RegisterViewForViewModel<FeatureListPage, FeatureListViewModel>();
             container.RegisterViewForViewModel<MorePage, MoreViewModel>();
             container.RegisterViewForViewModel<LabelsPage, LabelsViewModel>();
