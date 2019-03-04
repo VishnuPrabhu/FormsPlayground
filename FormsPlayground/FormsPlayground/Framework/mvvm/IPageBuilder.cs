@@ -1,7 +1,7 @@
 using System;
 using Xamarin.Forms;
 
-namespace FormsPlayground.Infrastructure.Mvvm
+namespace FormsPlayground.Framework.Mvvm
 {
     public interface IPageBuilder
     {

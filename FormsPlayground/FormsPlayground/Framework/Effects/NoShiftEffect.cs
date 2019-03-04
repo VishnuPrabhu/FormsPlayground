@@ -1,6 +1,6 @@
 using Xamarin.Forms;
 
-namespace FormsPlayground.Effects
+namespace FormsPlayground.Framework.Effects
 {
     public class NoShiftEffect : RoutingEffect
     {

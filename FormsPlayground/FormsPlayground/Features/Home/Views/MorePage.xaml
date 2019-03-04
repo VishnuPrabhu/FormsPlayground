@@ -5,9 +5,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resources="clr-namespace:FormsPlayground.Resources;assembly=FormsPlayground"
-    xmlns:pages="clr-namespace:FormsPlayground.Infrastructure.Pages;assembly=FormsPlayground"
     xmlns:viewModels="clr-namespace:FormsPlayground.Features.Home.ViewModels"
-    x:Class="FormsPlayground.Features.Home.More.MorePage"
+    xmlns:pages="clr-namespace:FormsPlayground.Framework.Pages;assembly=FormsPlayground"
+    x:Class="FormsPlayground.Features.Home.Views.MorePage"
     Title="{x:Static resources:Strings.Menu_More}">
     
     <ContentPage.Content>

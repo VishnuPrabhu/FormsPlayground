@@ -4,9 +4,9 @@
     x:TypeArguments="viewModels:FeatureListViewModel"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:FormsPlayground.Infrastructure.Pages;assembly=FormsPlayground"
     xmlns:viewModels="clr-namespace:FormsPlayground.Features.Home.ViewModels;assembly=FormsPlayground"
     xmlns:views="clr-namespace:FormsPlayground.Features.Home.Views;assembly=FormsPlayground"
+    xmlns:pages="clr-namespace:FormsPlayground.Framework.Pages;assembly=FormsPlayground"
     x:Class="FormsPlayground.Features.Home.Views.FeatureListPage"
     x:DataType="viewModels:FeatureListViewModel">
 

@@ -2,13 +2,13 @@ using System;
 using System.Linq;
 using System.Reflection;
 using DryIoc;
-using FormsPlayground.Infrastructure.InversionOfControl;
+using FormsPlayground.Framework.InversionOfControl;
 using FormsPlayground.Resources;
 using ReactiveUI;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace FormsPlayground.Infrastructure.Mvvm
+namespace FormsPlayground.Framework.Mvvm
 {
     public class PageBuilder : IPageBuilder
     {

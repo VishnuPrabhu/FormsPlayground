@@ -1,5 +1,5 @@
 ﻿using FormsPlayground.Features.Home.Views;
-using FormsPlayground.Infrastructure.InversionOfControl;
+using FormsPlayground.Framework.InversionOfControl;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]

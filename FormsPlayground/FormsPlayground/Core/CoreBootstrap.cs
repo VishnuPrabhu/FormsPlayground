@@ -1,10 +1,9 @@
 using DryIoc;
-using FormsPlayground.Features.Home.More;
 using FormsPlayground.Features.Home.ViewModels;
 using FormsPlayground.Features.Home.Views;
 using FormsPlayground.Features.Labels;
-using FormsPlayground.Infrastructure.InversionOfControl;
-using FormsPlayground.Infrastructure.Mvvm;
+using FormsPlayground.Framework.InversionOfControl;
+using FormsPlayground.Framework.Mvvm;
 
 namespace FormsPlayground.Core
 {

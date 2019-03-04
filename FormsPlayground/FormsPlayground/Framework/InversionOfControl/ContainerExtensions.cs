@@ -1,7 +1,7 @@
 using DryIoc;
 using ReactiveUI;
 
-namespace FormsPlayground.Infrastructure.InversionOfControl
+namespace FormsPlayground.Framework.InversionOfControl
 {
     public static class ContainerExtensions
     {

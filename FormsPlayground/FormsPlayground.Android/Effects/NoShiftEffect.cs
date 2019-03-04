@@ -5,7 +5,7 @@ using FormsPlayground.Droid.Effects;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly:ExportEffect (typeof(NoShiftEffect), nameof(FormsPlayground.Effects.NoShiftEffect))]
+[assembly:ExportEffect (typeof(NoShiftEffect), nameof(FormsPlayground.Framework.Effects.NoShiftEffect))]
 namespace FormsPlayground.Droid.Effects
 {
     // Thanks to: https://montemagno.com/xamarin-forms-fully-customize-bottom-tabs-on-android-turn-off-shifting/
