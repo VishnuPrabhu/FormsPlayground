@@ -1,8 +1,6 @@
 using System;
 using Android.App;
 using Android.Content;
-using FormsPlayground.Core;
-using FormsPlayground.Infrastructure;
 using FormsPlayground.Infrastructure.InversionOfControl;
 
 namespace FormsPlayground.Droid

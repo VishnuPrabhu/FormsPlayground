@@ -12,9 +12,6 @@ namespace FormsPlayground.Features.Home.Model
         public Link[] References { get; set; }
         public Type ViewModelType { get; set; }
         public string PageKey { get; set; }
-
         public FeatureNode[] Children { get; set; }
     }
-    
-    
 }
