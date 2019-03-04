@@ -1,15 +1,15 @@
 using System;
 using System.Diagnostics;
 using DryIoc;
-using FormsPlayground.Effects;
-using FormsPlayground.Infrastructure.Extensions;
-using FormsPlayground.Infrastructure.InversionOfControl;
-using FormsPlayground.Infrastructure.Mvvm;
+using FormsPlayground.Framework.Effects;
+using FormsPlayground.Framework.Extensions;
+using FormsPlayground.Framework.InversionOfControl;
+using FormsPlayground.Framework.Mvvm;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using TabbedPage = Xamarin.Forms.TabbedPage;
 
-namespace FormsPlayground.Infrastructure.Pages
+namespace FormsPlayground.Framework.Pages
 {
     public class CustomTabbedPage : TabbedPage
     {
@@ -37,7 +37,7 @@ namespace FormsPlayground.Infrastructure.Pages
                     .StartLazyInitialization()
                     .SafeFireAndForget(
                         true, 
-                        ex => Console.WriteLine(ex.StackTrace));
+                        ex => Console.WriteLine((string) ex.StackTrace));
             }
         }
         

@@ -1,6 +1,6 @@
 using Xamarin.Forms;
 
-namespace FormsPlayground.Infrastructure.Pages
+namespace FormsPlayground.Framework.Pages
 {
     internal class EmptyPage : ContentPage
     {

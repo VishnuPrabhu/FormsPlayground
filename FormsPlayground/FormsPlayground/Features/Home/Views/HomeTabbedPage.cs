@@ -1,6 +1,6 @@
 using System;
 using FormsPlayground.Features.Home.ViewModels;
-using FormsPlayground.Infrastructure.Pages;
+using FormsPlayground.Framework.Pages;
 using FormsPlayground.Resources;
 
 namespace FormsPlayground.Features.Home.Views

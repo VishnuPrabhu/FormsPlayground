@@ -1,7 +1,7 @@
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 
-namespace FormsPlayground.Infrastructure.Mvvm
+namespace FormsPlayground.Framework.Mvvm
 {
     public class BaseViewModel : ReactiveObject, IFormsViewModel
     {

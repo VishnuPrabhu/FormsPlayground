@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace FormsPlayground.Infrastructure.Mvvm
+namespace FormsPlayground.Framework.Mvvm
 {
     public interface IFormsNavigation
     {

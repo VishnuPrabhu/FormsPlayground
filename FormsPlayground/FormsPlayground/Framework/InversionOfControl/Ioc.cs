@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DryIoc;
 using FormsPlayground.Resources;
 
-namespace FormsPlayground.Infrastructure.InversionOfControl
+namespace FormsPlayground.Framework.InversionOfControl
 {
     public sealed class Ioc
     {

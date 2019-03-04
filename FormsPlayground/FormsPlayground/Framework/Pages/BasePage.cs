@@ -1,9 +1,9 @@
 using System.Reactive.Linq;
-using FormsPlayground.Infrastructure.Mvvm;
+using FormsPlayground.Framework.Mvvm;
 using ReactiveUI;
 using ReactiveUI.XamForms;
 
-namespace FormsPlayground.Infrastructure.Pages
+namespace FormsPlayground.Framework.Pages
 {
     public abstract class BasePage<TViewModel> : ReactiveContentPage<TViewModel>
         where TViewModel : BaseViewModel

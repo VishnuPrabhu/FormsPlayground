@@ -1,6 +1,6 @@
 using System;
 
-namespace FormsPlayground.Infrastructure.Exceptions
+namespace FormsPlayground.Framework.Exceptions
 {
     public class ControlledException : Exception
     {

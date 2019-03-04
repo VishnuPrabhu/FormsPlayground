@@ -1,7 +1,7 @@
 using System;
 using Android.App;
 using Android.Content;
-using FormsPlayground.Infrastructure.InversionOfControl;
+using FormsPlayground.Framework.InversionOfControl;
 
 namespace FormsPlayground.Droid
 {

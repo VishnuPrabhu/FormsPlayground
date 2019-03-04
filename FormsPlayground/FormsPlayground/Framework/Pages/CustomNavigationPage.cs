@@ -2,12 +2,12 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using DryIoc;
-using FormsPlayground.Infrastructure.InversionOfControl;
-using FormsPlayground.Infrastructure.Mvvm;
+using FormsPlayground.Framework.InversionOfControl;
+using FormsPlayground.Framework.Mvvm;
 using FormsPlayground.Resources;
 using Xamarin.Forms;
 
-namespace FormsPlayground.Infrastructure.Pages
+namespace FormsPlayground.Framework.Pages
 {
     public class CustomNavigationPage : NavigationPage, IFormsNavigation
     {

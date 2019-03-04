@@ -1,4 +1,4 @@
-namespace FormsPlayground.Infrastructure.Extensions
+namespace FormsPlayground.Framework.Extensions
 {
     /// <summary>
     /// Extension methods for System.Threading.Tasks.Task

@@ -4,8 +4,8 @@
     x:TypeArguments="labels:LabelsViewModel"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:FormsPlayground.Infrastructure.Pages;assembly=FormsPlayground"
     xmlns:labels="clr-namespace:FormsPlayground.Features.Labels;assembly=FormsPlayground"
+    xmlns:pages="clr-namespace:FormsPlayground.Framework.Pages;assembly=FormsPlayground"
     x:Class="FormsPlayground.Features.Labels.LabelsPage">
     <ContentPage.Content>
         <StackLayout>

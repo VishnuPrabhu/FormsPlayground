@@ -1,4 +1,4 @@
-namespace FormsPlayground.Infrastructure.Mvvm
+namespace FormsPlayground.Framework.Mvvm
 {
     public interface IFormsViewModel
     {
